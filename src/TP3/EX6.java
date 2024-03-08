@@ -2,7 +2,9 @@ package TP3;
 
 import java.util.Scanner;
 
-public class EX6{
+import java.util.Scanner;
+
+public class EX6 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -25,22 +27,16 @@ public class EX6{
         System.out.println("Tableau original :");
         afficherTableau(T);
 
-        // Copier toutes les composantes strictement
-        int[] copieTableau = copierTableau(T);
+        // Créer les tableaux TP et TN
+        int[] TP = copierPositifs(T);
+        int[] TN = copierNegatifs(T);
 
-        // Afficher la copie du tableau
-        System.out.println("Copie du tableau :");
-        afficherTableau(copieTableau);
-    }
+        // Afficher les tableaux TP et TN
+        System.out.println("Tableau des valeurs positives (TP) :");
+        afficherTableau(TP);
 
-    static int[] copierTableau(int[] original) {
-        int[] copie = new int[original.length];
-
-        for (int i = 0; i < original.length; i++) {
-            copie[i] = original[i];
-        }
-
-        return copie;
+        System.out.println("Tableau des valeurs négatives (TN) :");
+        afficherTableau(TN);
     }
 
     static void afficherTableau(int[] tableau) {
@@ -49,5 +45,52 @@ public class EX6{
         }
         System.out.println();
     }
-}
 
+    static int[] copierPositifs(int[] tableau) {
+        int countPositifs = 0;
+
+        // Compter le nombre de composantes strictement positives
+        for (int valeur : tableau) {
+            if (valeur > 0) {
+                countPositifs++;
+            }
+        }
+
+        // Créer le tableau TP
+        int[] TP = new int[countPositifs];
+        int indexTP = 0;
+
+        // Copier les composantes strictement positives
+        for (int valeur : tableau) {
+            if (valeur > 0) {
+                TP[indexTP++] = valeur;
+            }
+        }
+
+        return TP;
+    }
+
+    static int[] copierNegatifs(int[] tableau) {
+        int countNegatifs = 0;
+
+        // Compter le nombre de valeurs strictement négatives
+        for (int valeur : tableau) {
+            if (valeur < 0) {
+                countNegatifs++;
+            }
+        }
+
+        // Créer le tableau TN
+        int[] TN = new int[countNegatifs];
+        int indexTN = 0;
+
+        // Copier les valeurs strictement négatives
+        for (int valeur : tableau) {
+            if (valeur < 0) {
+                TN[indexTN++] = valeur;
+            }
+        }
+
+        return TN;
+    }
+}
