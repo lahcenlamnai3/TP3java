@@ -9,7 +9,7 @@ public class EX8 {
         Écrire un programme retournant le PGCD de 2 entiers entrés par l’utilisateur.
 
          */
-                System.out.println("Veuillez entrer deux entiers : ");
+        System.out.println("Veuillez entrer deux entiers : ");
         int num1 = sc.nextInt();
         int num2 = sc.nextInt();
         int[] tab_diviseur = new int[Math.min(num1, num2)+1];
