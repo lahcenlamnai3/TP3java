@@ -13,8 +13,6 @@ public class EX1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Demander à l'utilisateur d'entrer un entier positif
         System.out.print("Entrez un entier positif : ");
         int nombre = scanner.nextInt();
 
@@ -27,10 +25,7 @@ public class EX1 {
         System.out.println("Les diviseurs de " + nombre + " sont :");
         afficherDiviseurs(nombre);
 
-        // Afficher le nombre de diviseurs
         System.out.println("Le nombre de diviseurs est : " + compterDiviseurs(nombre));
-
-        // Afficher la somme des diviseurs
         System.out.println("La somme des diviseurs est : " + sommeDiviseurs(nombre));
     }
 
