@@ -6,7 +6,6 @@ public class EX7 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         // Demander l'âge de l'habitant
         System.out.print("Entrez l'âge : ");
         int age = scanner.nextInt();
