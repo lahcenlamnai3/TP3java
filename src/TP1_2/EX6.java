@@ -57,7 +57,6 @@ public class EX6 {
             return "Obésité";
         }
     }
-
     static String determinerEtatPoidsHomme(double imc) {
         if (imc < 20) {
             return "Maigreur";
