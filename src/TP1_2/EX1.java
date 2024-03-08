@@ -47,7 +47,6 @@ public class EX1 {
         }
         return compte;
     }
-
     static int sommeDiviseurs(int nombre) {
         int somme = 0;
         for (int i = 1; i <= nombre; i++) {
